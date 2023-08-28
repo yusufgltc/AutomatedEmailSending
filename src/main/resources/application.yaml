@@ -1,0 +1,6 @@
+email:
+  host: smtp-mail.outlook.com
+  port: 587
+  user:
+    mail: ${SENDER_EMAIL_ADDRESS}
+    password: ${SENDER_EMAIL_PASSWORD}
