@@ -33,6 +33,11 @@ public class EmailConfiguration {
     }
 
     @Bean
+    public EmailCreator emailCreator() {
+        return new EmailCreator();
+    }
+
+    @Bean
     public EmailService emailService(Session session, EmailProperties emailProperties, EmailCreator emailCreator) {
         return new EmailServiceImpl(session, emailProperties.getUser().getMail(), emailCreator);
     }
